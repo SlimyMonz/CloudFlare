@@ -19,14 +19,14 @@ import {
   SiSwift, SiJetbrains, SiHaskell
 } from "react-icons/si";
 
-// Projects Images (add your images to the images directory and import below)
+// images
 import Logo from "./images/logo.svg";
-// Hero Images (add your images to the /images directory with the same names)
-import HeroLight from "./images/hero-light.jpg";
-import HeroDark from "./images/hero-dark.jpg";
-// If you change the import names above then you need to change the export names below
-export { HeroLight as Light };
-export { HeroDark as Dark };
+
+import LightWallpaper from "./images/light-wallpaper.jpg";
+import DarkWallpaper from "./images/dark-wallpaper.jpg";
+
+export { LightWallpaper as Light };
+export { DarkWallpaper as Dark };
 
 // Blog link icon (imported above)
 export const Blog = <FaLink />;
