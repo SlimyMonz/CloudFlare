@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 // Data
-import { githubUsername } from "../data";
+import {githubUsername} from "../data";
 
 const initialState = {
   isLoading: true,
@@ -20,8 +20,7 @@ export const fetchGitHubInfo = createAsyncThunk(
         }
         return res;
       });
-      const data = await response.json();
-      return data;
+      return await response.json();
     } catch (err) {
       return rejectWithValue(
         `Error: ${err.message}, check username in data.js (currently ${githubUsername})`

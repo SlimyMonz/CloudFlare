@@ -19,9 +19,12 @@ export default function Contact() {
           <Title>
             <h2>Contact Me</h2>
             <div className="underline"></div>
+            <text>harry_hocker</text>
+            <p><text>@icloud.com</text></p>
           </Title>
         </Container>
       </StyledSection>
     </Element>
   );
 }
+// eventually add a resume in here?
