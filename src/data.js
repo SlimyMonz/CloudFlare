@@ -21,7 +21,6 @@ import {
 
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
-
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
 import HeroDark from "./images/hero-dark.jpg";
@@ -29,16 +28,8 @@ import HeroDark from "./images/hero-dark.jpg";
 export { HeroLight as Light };
 export { HeroDark as Dark };
 
-// GitHub username import
-export const githubUsername = "khyrdantai";
-
 // Blog link icon (imported above)
 export const Blog = <FaLink />;
-
-
-export const moreInfo =
-  "With a passion for coding, I have spent over a decade learning as much as I can about computers. Starting my education all the way back in 2008 in IT, I continued my passion for computers all the way through my college education. \n" +
-    "With a Bachelors in Computer Science from the University of Central Florida, I'm ready to apply my skills.";
 
 // Skills.
 export const skillData = [
@@ -120,9 +111,8 @@ export const skillData = [
 ];
 
 
-
 // GitHub projects. (Will automatically be alphabetical)
-export const filteredProjects = [
+export const githubProjects = [
     "AI_2022",
     "mygamelist",
     "Checksum",
@@ -141,3 +131,11 @@ export const projectCardImages = [
   },
 ];
 
+export const userInfo =
+  {
+    githubUsername: "khyrdantai",
+    name: "Harry Hocker",
+    email: "harry_hocker@slimymonz.com",
+    info: "With a passion for coding, I have spent over a decade learning as much as I can about computers. Starting my education all the way back in 2008 in IT, I continued my passion for computers all the way through my college education. \n" +
+        "With a Bachelors in Computer Science from the University of Central Florida, I'm ready to apply my skills."
+  }

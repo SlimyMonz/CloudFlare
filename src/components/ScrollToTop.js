@@ -5,7 +5,6 @@ export default function ScrollToTop() {
   const { pathname, hash } = useLocation();
   const navigate = useNavigate();
 
-  // https://reactjs.org/docs/hooks-reference.html#uselayouteffect
   React.useLayoutEffect(
     function () {
       // if not a hash link, scroll to top

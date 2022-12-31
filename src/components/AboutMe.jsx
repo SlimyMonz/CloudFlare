@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { selectData } from "../pages/homeSlice";
 import { Element } from "react-scroll";
-// Data
-import { moreInfo } from "../data";
+import { userInfo } from "../data";
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
@@ -35,7 +34,7 @@ export default function AboutMe() {
             <Col className="d-flex flex-column text-center">
               <Container>
                 <p>{bio}</p>
-                {moreInfo && <p>{moreInfo}</p>}
+                {userInfo.info && <p>{userInfo.info}</p>}
               </Container>
             </Col>
             <Col className="d-none d-md-block text-center">

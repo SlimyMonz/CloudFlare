@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 // Data
-import { githubUsername, projectCardImages } from "../data";
+import {projectCardImages, userInfo} from "../data";
 
 const initialState = {
   error: "",
@@ -8,10 +8,10 @@ const initialState = {
   data: [],
 };
 
-export const url = `https://api.github.com/users/${githubUsername}/repos?per_page=100`;
+export const url = `https://api.github.com/users/${userInfo.githubUsername}/repos?per_page=100`;
 
-export const fetchGitHubReops = createAsyncThunk(
-  "allProjects/fetchGitHubReops",
+export const fetchGitHubRepos = createAsyncThunk(
+  "allProjects/fetchGitHubRepos",
   async (thunkApi, { rejectWithValue }) => {
     try {
       const response = await fetch(url).then(function (res) {
@@ -20,11 +20,10 @@ export const fetchGitHubReops = createAsyncThunk(
         }
         return res;
       });
-      const data = await response.json();
-      return data;
+      return await response.json();
     } catch (err) {
       return rejectWithValue(
-        `Error: ${err.message}, check username in data.js (currently ${githubUsername})`
+        `Error: ${err.message}, check username in data.js (currently ${userInfo.githubUsername})`
       );
     }
   }
@@ -35,22 +34,22 @@ export const allProjectsSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder
-      .addCase(fetchGitHubReops.pending, (state) => {
+      .addCase(fetchGitHubRepos.pending, (state) => {
         state.isLoading = true;
         state.error = "";
       })
-      .addCase(fetchGitHubReops.fulfilled, (state, action) => {
+      .addCase(fetchGitHubRepos.fulfilled, (state, action) => {
         state.isLoading = false;
         state.data = action.payload;
         projectCardImages.forEach(function (element) {
-          state.data.forEach((el, i) => {
+          state.data.forEach((el) => {
             if (element.name.toLowerCase() === el.name.toLowerCase()) {
               el.image = element.image;
             }
           });
         });
       })
-      .addCase(fetchGitHubReops.rejected, (state, action) => {
+      .addCase(fetchGitHubRepos.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
         console.log(state.error);

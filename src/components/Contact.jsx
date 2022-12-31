@@ -4,7 +4,7 @@ import styled from "styled-components";
 // Components
 import { Container } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
-
+import { userInfo } from "../data";
 
 const StyledSection = styled.section`
   min-height: 89vh;
@@ -19,8 +19,7 @@ export default function Contact() {
           <Title>
             <h2>Contact Me</h2>
             <div className="underline"></div>
-            <text>harry_hocker</text>
-            <p><text>@icloud.com</text></p>
+            <text>{userInfo.email}</text>
           </Title>
         </Container>
       </StyledSection>

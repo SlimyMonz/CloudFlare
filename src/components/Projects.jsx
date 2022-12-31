@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 // Data
-import { filteredProjects } from "../data";
+import { githubProjects } from "../data";
 // Icons
 import { FaGithub } from "react-icons/fa";
 // Components
@@ -31,9 +31,9 @@ export default function Projects() {
     function () {
       const tempData = [];
       data.forEach((el, i) => (tempData[i] = Object.create(el)));
-      if (data.length !== 0 && filteredProjects.length !== 0) {
+      if (data.length !== 0 && githubProjects.length !== 0) {
         const tempArray = tempData.filter((obj) =>
-          filteredProjects.includes(obj.name)
+          githubProjects.includes(obj.name)
         );
         tempArray.length !== 0
           ? setMainProjects([...tempArray])
