@@ -133,7 +133,7 @@ export const projectCardImages = [
 
 export const userInfo =
   {
-    githubUsername: "khyrdantai",
+    githubUsername: "SlimyMonz",
     name: "Harry Hocker",
     email: "harry_hocker@slimymonz.com",
     info: "With a passion for coding, I have spent over a decade learning as much as I can about computers. Starting my education all the way back in 2008 in IT, I continued my passion for computers all the way through my college education. \n" +
