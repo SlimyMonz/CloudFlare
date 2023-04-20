@@ -35,13 +35,12 @@ const StyledSection = styled.section`
 
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const mailtoLink = `mailto:${userInfo.email}?subject=${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + email)}`;
+    const mailtoLink = `mailto:${userInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     window.location.href = mailtoLink;
   }
 
@@ -54,8 +53,7 @@ export default function Contact() {
             <div className="underline"></div>
             <StyledSection className="flex-column">
               <form onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Your Name" value={name} onChange={(event) => setName(event.target.value)} required />
-                <input type="email" name="email" placeholder="Your Email" value={email} onChange={(event) => setEmail(event.target.value)} required />
+                <input type="text" name="name" placeholder="Subject" value={subject} onChange={(event) => setSubject(event.target.value)} required />
                 <textarea name="message" rows="5" cols="30" placeholder="Your Message" value={message} onChange={(event) => setMessage(event.target.value)} required />
                 <input type="submit" value="Send" />
               </form>
