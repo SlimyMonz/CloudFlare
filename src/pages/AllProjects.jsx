@@ -241,7 +241,7 @@ export default function AllProjects() {
               </Row>
               <Container className="d-flex justify-content-center mt-4">
                 {pageItems.length <= 2 ? (
-                  <Pagination size="lg" className="mb-4">
+                  <Pagination className="mb-4">
                     {pageItems}
                   </Pagination>
                 ) : (
@@ -253,13 +253,9 @@ export default function AllProjects() {
                           : setActivePage(activePage - 1)
                       }
                     />
-                    {pageItems[0]}
-                    <Pagination.Ellipsis />
                     <Pagination.Item active={true}>
                       {activePage}
                     </Pagination.Item>
-                    <Pagination.Ellipsis />
-                    {pageItems[pageItems.length - 1]}
                     <Pagination.Next
                       onClick={() =>
                         activePage === pageItems.length
