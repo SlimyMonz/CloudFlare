@@ -136,6 +136,6 @@ export const userInfo =
     githubUsername: "SlimyMonz",
     name: "Harry Hocker",
     email: "harry_hocker@slimymonz.com",
-    info: "Due to my passion for learning about technology, I have spent over a decade learning as much as I can about computers, information technology, and code. Starting my education in 2008 with Information Technologies, I continued my general passing for computers into my college education. \n" +
+    info: "Due to my deep interest in technology, I have spent over a decade learning as much as I can about computers, information technology, and code. Starting my education in 2008 with Information Technologies, I continued my passion for computers into my college education. \n" +
         "With a Bachelors in Computer Science from the University of Central Florida, I'm ready to apply my knowledge and skills."
   }
