@@ -8,11 +8,14 @@ import { Title } from "./globalStyledComponents";
 import { userInfo } from "../data";
 
 const StyledSection = styled.section`
-  min-height: 25vh;
+  min-height: 50vh;
 
   display: flex;
   justify-content: center;
 
+  h2 {
+    margin-top: 25rem;
+  }
 
   form {
     text-align: center;
@@ -20,7 +23,7 @@ const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 40rem;
   }
 
   input,
